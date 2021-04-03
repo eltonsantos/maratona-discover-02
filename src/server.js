@@ -17,4 +17,7 @@ server.use(express.urlencoded({ extended: true }))
 // routes
 server.use(routes);
 
-server.listen(3000, () => console.log('rodando'));
+// HEROKU
+var porta = process.env.PORT || 8080;
+
+server.listen(porta, () => console.log('rodando'));
